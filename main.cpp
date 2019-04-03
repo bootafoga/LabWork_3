@@ -87,13 +87,6 @@ int main(){
     int size = symbols.getSize();
     fanoSum(size, current);
 
-//    string check = "";
-//    check = check + '1';
-//    check = check + '1';
-//    check = check + '1';
-//    check = check + '0';
-
-//    cout << check;
 
     for (int i = 0; i < symbols.getSize(); i++){
         cout << current[i]->key << "[" << current[i]->code << "] ";
@@ -104,29 +97,6 @@ int main(){
         cout << symbols.find(o)->key << symbols.find(o)->code << " ";
     }
 
-//
-//    int sum = 0;
-//    for (int i = 0; i < size; i++){
-//        sum = sum + current[i]->value;
-//    }
-//
-//    cout << endl << sum << endl;
-//
-//    MapNode<char, int> *current_new[size];
-//    int checkSum = 0;
-//    int i = 0;
-//    while (checkSum < sum/2) {
-//        current_new[i] = current[i];
-//        checkSum = checkSum + current[i]->value;
-//        i++;
-//    }
-//
-//    MapNode<char, int> *current_new2[size];
-//    int k = 0;
-//    for (i; i < size; i++){
-//        current_new2[k] = current[i];
-//        k++;
-//    }
     // есть мапа символ-частота
    // вернуть список частот
    // рекурсивно:
@@ -134,10 +104,6 @@ int main(){
    // дойти до половины, конструктор копии
    // вторая половина, конструктор копии
    // когда по 1 символу, стоп
-
-
-
-
 
    return 0;
 }

@@ -12,27 +12,6 @@
 using namespace std;
 
 void fano(){
-    MapNode<char, int> *current[64];
-
-    Map<char, int> symbols;
-    string stroka = "it is test string";
-
-    int currentCount = 0;
-    for (int i = 0; i < stroka.length(); i++){
-        currentCount = 0;
-        char currChar = stroka[i];
-        for (int j = i; j < stroka.length(); j++){
-            if (stroka[j] == currChar) currentCount++;
-
-        }
-        symbols.insert(currChar, currentCount);
-    }
-
-    List<char> keys = symbols.get_keys();
-    for (int i = 0; i < symbols.getSize(); i++){
-        current[i] = symbols.find(keys.At(i));
-        cout << current[i]->key;
-    }
 
 }
 
