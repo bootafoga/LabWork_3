@@ -4,6 +4,7 @@
 
 #ifndef LABORATORYWORK_3_FANO_H
 #define LABORATORYWORK_3_FANO_H
+#define MAX_SIZE 50
 
 #include "map.h"
 #include <stdio.h>
@@ -12,12 +13,6 @@
 
 using namespace std;
 class Fano{
-private:
-    string input;
-    string encodedStr;
-    string decodedStr;
-    Map<char, int> symbolsInString;
-    MapNode<char, int> *arrayOfSymbols[64];
 public:
     Fano(string input){
         this->input = input;
@@ -26,6 +21,12 @@ public:
     void fanoCoding();
     void fanoDecoding();
     void printInfo();
+private:
+    string input;
+    string encodedStr;
+    string decodedStr;
+    Map<char, int> symbolsInString;
+    MapNode<char, int> *arrayOfSymbols[MAX_SIZE];
 };
 
 void fanoCreateCode(int size, MapNode<char, int> *arrayOfSymbols[]){
@@ -84,7 +85,6 @@ void Fano::fanoCoding() {
     }
     // create array of symbols
 
-
     for (int i = 0; i < size - 1; i++){
         MapNode<char, int> *currentItem = arrayOfSymbols[i];
         if (arrayOfSymbols[i]->value > arrayOfSymbols[i+1]->value){
@@ -96,7 +96,7 @@ void Fano::fanoCoding() {
 
     fanoCreateCode(size, arrayOfSymbols);
 
-    string codedString = "";
+    string codedString;
     for (char o: input){
         codedString = codedString + symbolsInString.find(o)->code;
     }
@@ -106,7 +106,6 @@ void Fano::fanoCoding() {
 
 
 void Fano::fanoDecoding(){
-
     string oneSymbol;
 
     for (int i = 0; i < encodedStr.size(); i++){

@@ -13,9 +13,9 @@ public:
     MapNode(T key, T1 value);
     ~MapNode();
     T key;
-    string code = "";
     T1 value;
     bool color;     //if 0 it's black, if 1 it's red
+    string code = "";
     MapNode *left;
     MapNode *right;
     MapNode *parent;
