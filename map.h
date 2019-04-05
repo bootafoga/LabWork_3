@@ -1,7 +1,7 @@
 //
 // Created by Мария on 27.02.2019.
 //
-
+#pragma once
 #include "List.h"
 #include <iostream>
 using namespace std;

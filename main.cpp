@@ -1,7 +1,10 @@
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include "Fano.h"
 #include <stdio.h>
+void fano(string input);
 
-int main(){
+int main(int argc, char* argv[]){
     string input = "it is test string";
     fano(input);
     cout << endl;
@@ -17,6 +20,10 @@ int main(){
 
     string input3 = "Robin Hood was born near the end of the 12th century. His real name was Robert. He was the son of the Earl of Huntingdon. At that time, England had many problems. King Richard was away on a crusade in the Holy Land. He was away many years.";
     fano(input3);
+    cout << endl << endl;
+
+    testing::InitGoogleTest(&argc, argv);
+    int b = RUN_ALL_TESTS();
 
     return 0;
 }
