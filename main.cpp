@@ -5,6 +5,12 @@
 void fano(string input);
 
 int main(int argc, char* argv[]){
+
+//    string input;
+//    getline(cin, input);
+//    fano(input);
+//    cout << endl;
+
     string input = "it is test string";
     fano(input);
     cout << endl;
@@ -22,8 +28,8 @@ int main(int argc, char* argv[]){
     fano(input3);
     cout << endl << endl;
 
-    testing::InitGoogleTest(&argc, argv);
-    int b = RUN_ALL_TESTS();
+//    testing::InitGoogleTest(&argc, argv);
+//    int b = RUN_ALL_TESTS();
 
     return 0;
 }

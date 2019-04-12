@@ -19,6 +19,16 @@ namespace {
     };
 }
 
+TEST_F(ClassDeclaration, fanoCodingEmpty_check){
+    try {
+        string check;
+        Fano *newFano = new Fano(check);
+
+    } catch (exception& ex) {
+        EXPECT_STREQ("Empty input", ex.what());
+    }
+}
+
 TEST_F(ClassDeclaration, fanoCoding_check){
     string check = "abbcccdddd";
     Fano *newFano = new Fano(check);

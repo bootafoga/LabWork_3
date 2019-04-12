@@ -238,22 +238,4 @@ template<class T> ostream &operator<<(ostream &out, List<T>& list) {
     return out;
 }
 
-//template<typename T>
-//Node<T>* List<T>::copy(List<T> list) {
-//
-//    Node<T> *listItem = this->head;   //search for the last item
-//    Node<T> *headCopy = new Node<T>(listItem->field);
-//    Node<T> *copyList = headCopy;
-//
-//
-//    while (listItem->nextNode != nullptr) {
-//        copyList->nextNode = new Node<T>(listItem->field);
-//        listItem = listItem->nextNode;
-//        copyList = copyList->nextNode;
-//    }
-//
-//    return headCopy;
-//}
-//
-
 #endif //LABORATORYWORK_1_LIST_H
